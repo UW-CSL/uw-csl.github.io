@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Cognitive Systems Laboratory live demonstrations." />
+    <title>CSL Live Works</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="access-screen" id="access-screen">
+      <form class="access-card" id="access-form" novalidate>
+        <p class="eyebrow">Cognitive Systems Laboratory</p>
+        <h1>Live works</h1>
+        <p>Enter the access code shared with you to view our demonstrations.</p>
+        <label for="access-code">Access code</label>
+        <div class="password-field">
+          <input id="access-code" name="access-code" type="password" autocomplete="current-password" required aria-describedby="access-error" />
+          <button class="password-toggle" id="password-toggle" type="button" aria-pressed="false" aria-label="Toggle access code visibility" aria-controls="access-code">
+            <svg class="eye-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z" />
+              <circle cx="12" cy="12" r="2.5" />
+              <path class="eye-slash" d="m4 4 16 16" />
+            </svg>
+          </button>
+        </div>
+        <p class="error" id="access-error" aria-live="polite"></p>
+        <button type="submit">Enter site</button>
+      </form>
+    </div>
+
+    <main class="site-content" id="site-content" hidden>
+      <header class="hero">
+        <p class="eyebrow">University of Wisconsin–Madison · Cognitive Systems Laboratory</p>
+        <h1>CSL live works</h1>
+        <p class="intro">
+          This site gathers links to live demonstrations and other active CSL work. Choose a card below to access a
+          demonstration or its related materials.
+        </p>
+      </header>
+
+      <section aria-labelledby="research-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Active work</p>
+          <h2 id="research-heading">Research projects</h2>
+        </div>
+
+        <div class="card-grid">
+          <article class="work-card" id="art-preferences">
+            <div class="project-avatar art-avatar" aria-hidden="true">
+              <span>AP</span>
+            </div>
+            <div>
+              <p class="card-label">In development</p>
+              <h3>Art Preferences</h3>
+              <p>Links and a short project description will be added here as this work becomes available.</p>
+            </div>
+            <a class="card-link placeholder-link" href="#art-preferences">Demonstration link — coming soon</a>
+            <a class="text-link placeholder-link" href="#art-preferences">Project materials — coming soon</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-section" aria-labelledby="side-projects-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Experiments &amp; collaborations</p>
+          <h2 id="side-projects-heading">Side projects</h2>
+        </div>
+
+        <div class="card-grid">
+          <article class="work-card">
+            <img class="project-image peapod-image" src="assets/peapod-transparent-bg.png" alt="HFE Peapod illustration" />
+            <div>
+              <p class="card-label">Live demonstration</p>
+              <h3>HFE Peapod</h3>
+              <p>Open the current interactive HFE Peapod demonstration.</p>
+            </div>
+            <a class="card-link" href="https://d1j7v5u0jmb8lf.cloudfront.net/" target="_blank" rel="noopener">
+              Launch demonstration <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="access.js"></script>
+  </body>
+</html>
